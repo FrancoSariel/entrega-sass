@@ -1,0 +1,138 @@
+/*reset*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: auto;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.grid-conteiner> {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+
+}
+
+.grid-conteiner {
+    display: grid;
+    gap: 20px;
+    grid-template:
+        "header"
+        "navbar"
+        "main"
+        "footer";
+
+
+
+    .header {
+        grid-area: header;
+        background-color: aqua;
+    }
+
+    .main {
+        grid-area: main;
+        background-color: burlywood;
+    }
+
+    .navbar {
+        grid-area: navbar;
+        background-color: darkgray;
+    }
+
+    .siderbar {
+        grid-area: sidebar;
+        background-color: cornsilk;
+
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: gray;
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    width: 50px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+
+
+}
+
+nav ul li a {
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.inicio {
+    display: none;
+}
+
+.article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+article section div img {
+    width: 150px;
+}
+
+article section div a {
+    color: white;
+    text-decoration: none;
+    background-color: blue;
+    border: 1px solid blue;
+    border-radius: 5px;
+    margin-bottom: 5px;
+
+}
+
+.footer {}
+
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li a {
+    text-decoration: none;
+}
+@media (min-width:768px) {
+    grid-template:
+        "header navbar" auto
+        "main main"
+        "footer footer";
+}
+
+@media (min-width:992px) {
+    grid-template:
+        "header navbar navbar"
+        "main main main"
+        "footer footer footer";
+}

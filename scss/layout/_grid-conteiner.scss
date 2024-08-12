@@ -1,0 +1,25 @@
+.grid-conteiner {
+    display: grid;
+    gap: 20px;
+    grid-template:
+        "header"
+        "navbar"
+        "main"
+        "footer";
+    .header{
+        grid-area: header;
+        background-color: aqua;
+    }    
+    .main {
+        grid-area: main;
+        background-color: burlywood;
+    }
+    .navbar{
+        grid-area: navbar;
+        background-color: darkgray;
+    }
+    .footer{
+        grid-area: footer;
+        background-color: gray;
+    }
+}
